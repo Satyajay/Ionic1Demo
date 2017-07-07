@@ -1,0 +1,17 @@
+<ion-view view-title="Google place">
+	<ion-content>
+
+		<ion-list>
+			<ion-item>
+				<input style="width: 100%;" type="text"
+					placeholder="Change address"
+					google-autocomplete-suggestion
+					location="vm.data.location"
+					country-code="{{vm.countryCode}}"
+					on-selection="vm.onAddressSelection(location)"
+					ng-model="vm.data.location.formatted_address">
+			</ion-item>
+			<ion-item>Coords: {{vm.geo}}</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
